@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Bird head - teal circle -->
+  <circle cx="48" cy="50" r="38" fill="url(#birdGrad)"/>
+  <!-- Bird head cutout for beak area -->
+  <path d="M70 45 C75 40, 90 48, 88 55 C86 62, 75 60, 70 58 Z" fill="url(#beakGrad)"/>
+  <!-- Eye -->
+  <circle cx="45" cy="42" r="5" fill="#0a1628"/>
+  <!-- Eye highlight -->
+  <circle cx="43.5" cy="40.5" r="1.5" fill="rgba(255,255,255,0.3)"/>
+  <!-- Bar chart bars -->
+  <rect x="68" y="72" width="12" height="28" rx="3" fill="url(#bar1Grad)"/>
+  <rect x="84" y="58" width="12" height="42" rx="3" fill="url(#bar2Grad)"/>
+  <rect x="100" y="42" width="12" height="58" rx="3" fill="url(#bar3Grad)"/>
+  <defs>
+    <linearGradient id="birdGrad" x1="10" y1="20" x2="86" y2="88">
+      <stop offset="0%" stop-color="#40d9c0"/>
+      <stop offset="100%" stop-color="#2bbcb3"/>
+    </linearGradient>
+    <linearGradient id="beakGrad" x1="70" y1="42" x2="90" y2="58">
+      <stop offset="0%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#e8912d"/>
+    </linearGradient>
+    <linearGradient id="bar1Grad" x1="74" y1="72" x2="74" y2="100">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="bar2Grad" x1="90" y1="58" x2="90" y2="100">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="bar3Grad" x1="106" y1="42" x2="106" y2="100">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+</svg>

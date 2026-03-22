@@ -30,14 +30,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 22C12 22 15 16 20 14C25 12 30 15 30 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <circle cx="24" cy="16" r="2" fill="currentColor"/>
-                        <path d="M10 25C10 25 16 28 20 28C24 28 30 25 30 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
-                    </svg>
-                </div>
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="OrniMetrics" class="logo-img">
                 <span>OrniMetrics</span>
             </a>
             <div class="nav-links" id="navLinks">
@@ -49,7 +42,7 @@
                 <a href="#research" class="nav-link">Research</a>
                 <a href="#app" class="nav-link">App</a>
                 <a href="#business" class="nav-link">Business</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
                 <a href="#faq" class="nav-link">FAQ</a>
                 <a href="#source" class="nav-link">Source</a>
             </div>
@@ -159,6 +152,30 @@
                         &ldquo;Conventional seed trays are a first-come-first-serve buffet. Dominant birds elbow out the timid, wasted seed piles up, and diseases thrive in leftovers.&rdquo;
                     </blockquote>
                     <p class="solution-answer">OrniMetrics solves all of this with <strong>AI-powered selective feeding</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats Banner -->
+    <section class="stats-banner">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="impact-stat" data-aos="fade-up" data-aos-delay="100">
+                    <span class="impact-number" data-count="136">0</span><span class="impact-suffix">+</span>
+                    <span class="impact-label">Species Identified</span>
+                </div>
+                <div class="impact-stat" data-aos="fade-up" data-aos-delay="200">
+                    <span class="impact-number" data-count="120">0</span><span class="impact-suffix">FPS</span>
+                    <span class="impact-label">Max Detection Speed</span>
+                </div>
+                <div class="impact-stat" data-aos="fade-up" data-aos-delay="300">
+                    <span class="impact-number" data-count="95">0</span><span class="impact-suffix">%</span>
+                    <span class="impact-label">Classification Accuracy</span>
+                </div>
+                <div class="impact-stat" data-aos="fade-up" data-aos-delay="400">
+                    <span class="impact-number" data-count="0">0</span><span class="impact-suffix"></span>
+                    <span class="impact-label">Cloud Dependency</span>
                 </div>
             </div>
         </div>
@@ -604,71 +621,140 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="section section-dark" id="pricing">
+    <!-- Future Plans / Product Roadmap -->
+    <section class="section section-dark" id="roadmap">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Plans</span>
-                <h2 class="section-title">Choose Your<br><span class="gradient-text">Plan</span></h2>
-                <p class="section-desc">From hobbyist birdwatcher to professional researcher</p>
+                <span class="section-tag">Roadmap</span>
+                <h2 class="section-title">Future<br><span class="gradient-text">Product Lineup</span></h2>
+                <p class="section-desc">Expanding the OrniMetrics ecosystem with models for every birdwatcher</p>
             </div>
-            <div class="pricing-grid">
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="pricing-header">
-                        <h3>Starter</h3>
-                        <div class="pricing-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">299</span>
-                        </div>
-                        <p class="pricing-period">One-time hardware cost</p>
+            <div class="roadmap-products">
+                <!-- OrniMetrics Lite -->
+                <div class="product-card product-lite" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-badge-wrap">
+                        <span class="product-badge lite-badge">Coming Soon</span>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i data-lucide="check"></i> OrniMetrics Feeder Unit</li>
+                    <div class="product-header-area">
+                        <div class="product-icon-wrap lite-icon"><i data-lucide="feather"></i></div>
+                        <h3>OrniMetrics <span class="lite-text">Lite</span></h3>
+                        <p class="product-tagline">Affordable AI bird feeding for everyone</p>
+                    </div>
+                    <ul class="product-features">
+                        <li><i data-lucide="check"></i> Raspberry Pi Zero 2W powered</li>
+                        <li><i data-lucide="check"></i> Basic species detection (up to 30 species)</li>
+                        <li><i data-lucide="check"></i> Single-servo dispensing</li>
+                        <li><i data-lucide="check"></i> Compact weatherproof design</li>
+                        <li><i data-lucide="check"></i> Companion app with basic features</li>
+                        <li><i data-lucide="check"></i> WiFi connectivity</li>
+                    </ul>
+                    <div class="product-price-area">
+                        <span class="product-est-price">Est. <strong>$149</strong></span>
+                    </div>
+                </div>
+                <!-- OrniMetrics Standard (current) -->
+                <div class="product-card product-standard product-current" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-badge-wrap">
+                        <span class="product-badge standard-badge">Current Model</span>
+                    </div>
+                    <div class="product-header-area">
+                        <div class="product-icon-wrap standard-icon"><i data-lucide="bird"></i></div>
+                        <h3>OrniMetrics <span class="standard-text">Standard</span></h3>
+                        <p class="product-tagline">The original AI-powered smart feeder</p>
+                    </div>
+                    <ul class="product-features">
+                        <li><i data-lucide="check"></i> Raspberry Pi 5 + AI HAT+</li>
+                        <li><i data-lucide="check"></i> 136+ species detection at 120 FPS</li>
+                        <li><i data-lucide="check"></i> Multi-servo precision dispensing</li>
+                        <li><i data-lucide="check"></i> Full weatherproof housing</li>
+                        <li><i data-lucide="check"></i> Firebase cloud integration</li>
+                        <li><i data-lucide="check"></i> Per-species portion control</li>
+                    </ul>
+                    <div class="product-price-area">
+                        <span class="product-est-price"><strong>$299</strong></span>
+                    </div>
+                </div>
+                <!-- OrniMetrics Pro -->
+                <div class="product-card product-pro" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-badge-wrap">
+                        <span class="product-badge pro-badge">In Development</span>
+                    </div>
+                    <div class="product-header-area">
+                        <div class="product-icon-wrap pro-icon"><i data-lucide="crown"></i></div>
+                        <h3>OrniMetrics <span class="pro-text">Pro</span></h3>
+                        <p class="product-tagline">Premium research-grade smart feeder</p>
+                    </div>
+                    <ul class="product-features">
+                        <li><i data-lucide="check"></i> Raspberry Pi 5 (8GB) + Dual AI HAT+</li>
+                        <li><i data-lucide="check"></i> 4K camera with night vision</li>
+                        <li><i data-lucide="check"></i> Multi-chamber dispensing (4 seed types)</li>
+                        <li><i data-lucide="check"></i> Solar panel + battery backup</li>
+                        <li><i data-lucide="check"></i> Built-in microphone for bird call ID</li>
+                        <li><i data-lucide="check"></i> Cellular connectivity (LTE)</li>
+                        <li><i data-lucide="check"></i> Research-grade data export</li>
+                    </ul>
+                    <div class="product-price-area">
+                        <span class="product-est-price">Est. <strong>$599</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription Tiers -->
+            <div class="section-header" data-aos="fade-up" style="margin-top: 80px;">
+                <span class="section-tag">Subscriptions</span>
+                <h2 class="section-title">Software<br><span class="gradient-text">Plans</span></h2>
+                <p class="section-desc">Unlock the full potential of your OrniMetrics feeder</p>
+            </div>
+            <div class="sub-grid">
+                <div class="sub-card" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Free</h4>
+                    <div class="sub-price">$0<span>/mo</span></div>
+                    <p>Included with every feeder</p>
+                    <ul>
                         <li><i data-lucide="check"></i> Basic species detection</li>
-                        <li><i data-lucide="check"></i> Companion app access</li>
                         <li><i data-lucide="check"></i> Local photo storage</li>
-                        <li><i data-lucide="check"></i> Community access</li>
+                        <li><i data-lucide="check"></i> Basic app dashboard</li>
+                        <li><i data-lucide="check"></i> Manual feeding schedules</li>
                     </ul>
-                    <a href="#" class="btn btn-secondary pricing-btn">Get Started</a>
                 </div>
-                <div class="pricing-card pricing-card-featured" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-popular">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Pro</h3>
-                        <div class="pricing-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">9</span>
-                            <span class="price-period-inline">/mo</span>
-                        </div>
-                        <p class="pricing-period">+ $349 hardware</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i data-lucide="check"></i> Everything in Starter</li>
+                <div class="sub-card sub-card-popular" data-aos="fade-up" data-aos-delay="200">
+                    <div class="sub-popular-tag">Best Value</div>
+                    <h4>Plus</h4>
+                    <div class="sub-price">$5<span>/mo</span></div>
+                    <p>For casual birdwatchers</p>
+                    <ul>
+                        <li><i data-lucide="check"></i> Everything in Free</li>
                         <li><i data-lucide="check"></i> Cloud photo backup</li>
-                        <li><i data-lucide="check"></i> Advanced analytics dashboard</li>
-                        <li><i data-lucide="check"></i> Rare species alerts</li>
-                        <li><i data-lucide="check"></i> AI-generated species reports</li>
-                        <li><i data-lucide="check"></i> Priority support</li>
+                        <li><i data-lucide="check"></i> Species analytics</li>
+                        <li><i data-lucide="check"></i> Rare bird push alerts</li>
+                        <li><i data-lucide="check"></i> Community leaderboards</li>
                     </ul>
-                    <a href="#" class="btn btn-primary pricing-btn">Go Pro</a>
                 </div>
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="pricing-header">
-                        <h3>Research</h3>
-                        <div class="pricing-price">
-                            <span class="price-amount">Custom</span>
-                        </div>
-                        <p class="pricing-period">For institutions & labs</p>
-                    </div>
-                    <ul class="pricing-features">
+                <div class="sub-card" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Pro</h4>
+                    <div class="sub-price">$15<span>/mo</span></div>
+                    <p>For enthusiasts & researchers</p>
+                    <ul>
+                        <li><i data-lucide="check"></i> Everything in Plus</li>
+                        <li><i data-lucide="check"></i> AI species reports</li>
+                        <li><i data-lucide="check"></i> Raw data API access</li>
+                        <li><i data-lucide="check"></i> Multi-feeder management</li>
+                        <li><i data-lucide="check"></i> Priority support</li>
+                        <li><i data-lucide="check"></i> Custom AI model training</li>
+                    </ul>
+                </div>
+                <div class="sub-card" data-aos="fade-up" data-aos-delay="400">
+                    <h4>Enterprise</h4>
+                    <div class="sub-price">Custom</div>
+                    <p>For institutions & labs</p>
+                    <ul>
                         <li><i data-lucide="check"></i> Everything in Pro</li>
                         <li><i data-lucide="check"></i> Bulk deployment</li>
-                        <li><i data-lucide="check"></i> Raw data API access</li>
-                        <li><i data-lucide="check"></i> Custom AI model training</li>
                         <li><i data-lucide="check"></i> Dedicated support</li>
                         <li><i data-lucide="check"></i> White-label options</li>
+                        <li><i data-lucide="check"></i> SLA guarantee</li>
+                        <li><i data-lucide="check"></i> On-premise hosting</li>
                     </ul>
-                    <a href="#" class="btn btn-secondary pricing-btn">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -789,20 +875,34 @@
         </div>
     </section>
 
+    <!-- Newsletter CTA -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter-card" data-aos="fade-up">
+                <div class="newsletter-glow"></div>
+                <div class="newsletter-content">
+                    <h2 class="section-title">Stay in the<br><span class="gradient-text">Loop</span></h2>
+                    <p>Be the first to know about new product launches, feature updates, and early access to OrniMetrics Lite and Pro.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button class="btn btn-primary newsletter-btn">
+                            <span>Subscribe</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                    <span class="newsletter-note">No spam, ever. Unsubscribe anytime.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="nav-logo">
-                        <div class="logo-icon">
-                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 22C12 22 15 16 20 14C25 12 30 15 30 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="24" cy="16" r="2" fill="currentColor"/>
-                                <path d="M10 25C10 25 16 28 20 28C24 28 30 25 30 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
-                            </svg>
-                        </div>
+                        <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="OrniMetrics" class="logo-img">
                         <span>OrniMetrics</span>
                     </div>
                     <p>AI-powered smart bird feeding technology.<br>Patent Pending.</p>
@@ -814,7 +914,7 @@
                         <a href="#how-it-works">How It Works</a>
                         <a href="#technology">Technology</a>
                         <a href="#parts">Parts Tour</a>
-                        <a href="#pricing">Pricing</a>
+                        <a href="#roadmap">Roadmap</a>
                     </div>
                     <div class="footer-col">
                         <h5>Resources</h5>

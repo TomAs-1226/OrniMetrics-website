@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Animated counters ---
     function animateCounters() {
-        const counters = document.querySelectorAll('.stat-number[data-count]');
+        const counters = document.querySelectorAll('.stat-number[data-count], .impact-number[data-count]');
         counters.forEach(counter => {
             if (counter.dataset.animated) return;
             const rect = counter.getBoundingClientRect();
