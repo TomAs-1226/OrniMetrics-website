@@ -178,6 +178,61 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- FAQ Accordion ---
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            const wasActive = item.classList.contains('active');
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            // Toggle clicked item
+            if (!wasActive) item.classList.add('active');
+            // Re-init lucide icons for the chevron
+            lucide.createIcons();
+        });
+    });
+
+    // --- Intersection Observer for staggered reveals ---
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.business-card, .pricing-card, .faq-item').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // --- Tilt effect on pricing cards ---
+    document.querySelectorAll('.pricing-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = card.classList.contains('pricing-card-featured') ? 'scale(1.05)' : '';
+        });
+    });
+
+    // --- Magnetic hover on CTA buttons ---
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = '';
+        });
+    });
+
     // --- Nav link active style ---
     const style = document.createElement('style');
     style.textContent = `
@@ -193,6 +248,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         .nav-toggle.active span:nth-child(3) {
             transform: rotate(-45deg) translate(5px, -5px);
+        }
+        .revealed {
+            animation: scaleIn 0.6s ease forwards;
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.95) translateY(10px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
         }
     `;
     document.head.appendChild(style);

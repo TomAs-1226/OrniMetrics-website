@@ -45,9 +45,12 @@
                 <a href="#how-it-works" class="nav-link">How It Works</a>
                 <a href="#technology" class="nav-link">Technology</a>
                 <a href="#3d-viewer" class="nav-link">3D View</a>
-                <a href="#parts" class="nav-link">Parts Tour</a>
+                <a href="#parts" class="nav-link">Parts</a>
                 <a href="#research" class="nav-link">Research</a>
                 <a href="#app" class="nav-link">App</a>
+                <a href="#business" class="nav-link">Business</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
                 <a href="#source" class="nav-link">Source</a>
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -175,7 +178,7 @@
                     <div class="step-content">
                         <div class="step-icon"><i data-lucide="power"></i></div>
                         <h3>Boot & Initialize</h3>
-                        <p>System powers on, loads the YOLO model onto the Coral TPU, and initializes the servo mechanism and camera feed.</p>
+                        <p>System powers on, loads the YOLO model onto the Raspberry Pi AI HAT+, and initializes the servo mechanism and camera feed.</p>
                     </div>
                 </div>
                 <div class="flow-step" data-aos="fade-left" data-aos-delay="200">
@@ -236,9 +239,9 @@
                     <div class="tech-icon-wrap">
                         <i data-lucide="zap"></i>
                     </div>
-                    <h3>Coral TPU</h3>
-                    <span class="tech-spec">Edge AI Accelerator</span>
-                    <p>Google's Coral TPU accelerates YOLO inference at the edge, delivering sub-50ms detection without cloud dependency.</p>
+                    <h3>Raspberry Pi AI HAT+</h3>
+                    <span class="tech-spec">Up to 120 FPS</span>
+                    <p>The Raspberry Pi AI HAT+ accelerates YOLO inference at the edge, delivering up to 120 FPS detection without cloud dependency.</p>
                 </div>
                 <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="tech-card-glow"></div>
@@ -273,8 +276,8 @@
                         <i data-lucide="camera"></i>
                     </div>
                     <h3>Camera System</h3>
-                    <span class="tech-spec">640x480 MJPG</span>
-                    <p>Integrated camera with configurable resolution and codec captures visitor photos and powers the detection loop.</p>
+                    <span class="tech-spec">Up to 120 FPS w/ AI HAT+</span>
+                    <p>Integrated camera with configurable resolution and codec captures visitor photos and powers the detection loop at up to 120 FPS with the AI HAT+.</p>
                 </div>
             </div>
         </div>
@@ -290,7 +293,7 @@
             </div>
             <div class="spline-container" data-aos="zoom-in" data-aos-delay="200">
                 <div class="spline-wrapper">
-                    <spline-viewer loading-anim-type="spinner-big-dark" url="https://prod.spline.design/PjN5ispLQG2yKD7m/scene.splinecode"></spline-viewer>
+                    <iframe src="https://my.spline.design/untitled-MmJUhUj8soPqn03HDgkSZNwp/" frameborder="0" width="100%" height="100%" allow="autoplay" loading="lazy"></iframe>
                 </div>
                 <div class="spline-controls">
                     <span class="control-hint"><i data-lucide="mouse-pointer-click"></i> Click & drag to rotate</span>
@@ -312,10 +315,10 @@
                 <div class="part-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="part-visual part-visual-3d">
                         <div class="part-number">01</div>
-                        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/33aQtUxUaW7BZOpm/scene.splinecode"></spline-viewer>
+                        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/PjN5ispLQG2yKD7m/scene.splinecode"></spline-viewer>
                     </div>
                     <div class="part-info">
-                        <h3>Tray / Baseplate</h3>
+                        <h3>Feeding Tray</h3>
                         <p>Custom-designed baseplate with textured grip surfaces for comfortable bird perching. Secured with five 3mm mounting screws to lock the dispensing mechanism in place. Engineered to support the combined weight of stored feed and landing birds.</p>
                         <div class="part-specs">
                             <span><i data-lucide="wrench"></i> 5x 3mm screws</span>
@@ -326,7 +329,7 @@
                 <div class="part-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="part-visual part-visual-3d">
                         <div class="part-number">02</div>
-                        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/gytb6j65teR0XGin/scene.splinecode"></spline-viewer>
+                        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/33aQtUxUaW7BZOpm/scene.splinecode"></spline-viewer>
                     </div>
                     <div class="part-info">
                         <h3>Dispensing Mechanism</h3>
@@ -340,7 +343,7 @@
                 <div class="part-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="part-visual part-visual-3d">
                         <div class="part-number">03</div>
-                        <iframe src="https://my.spline.design/untitled-TzS8d7Z7iJ42tijaQeO8HGVx/" frameborder="0" width="100%" height="100%" allow="autoplay" loading="lazy"></iframe>
+                        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/gytb6j65teR0XGin/scene.splinecode"></spline-viewer>
                     </div>
                     <div class="part-info">
                         <h3>Feed Storage</h3>
@@ -358,9 +361,9 @@
                     </div>
                     <div class="part-info">
                         <h3>Camera Housing</h3>
-                        <p>Protective enclosure for the detection camera, providing optimal viewing angle while shielding electronics from weather. Houses the camera module that feeds the YOLO detection pipeline at up to 12 FPS.</p>
+                        <p>Protective enclosure for the detection camera, providing optimal viewing angle while shielding electronics from weather. Houses the camera module that feeds the YOLO detection pipeline at up to 120 FPS with the Raspberry Pi AI HAT+.</p>
                         <div class="part-specs">
-                            <span><i data-lucide="video"></i> Up to 12 FPS</span>
+                            <span><i data-lucide="video"></i> Up to 120 FPS</span>
                             <span><i data-lucide="shield"></i> Weather-sealed</span>
                         </div>
                     </div>
@@ -385,7 +388,7 @@
                 <div class="patent-info">
                     <span class="patent-status">Patent Pending</span>
                     <h3>OrniMetrics Smart Bird Feeder System</h3>
-                    <p>Our novel approach to AI-powered selective bird feeding is protected by a pending patent application, covering the integration of edge AI species classification with automated dispensing mechanisms.</p>
+                    <p>Invented by Baichen Yu. Our novel approach to AI-powered selective bird feeding is protected by a pending patent application, covering the integration of edge AI species classification with automated dispensing mechanisms, per-species portion control, and intelligent cooldown systems.</p>
                 </div>
                 <div class="patent-badge">
                     <i data-lucide="badge-check"></i>
@@ -396,8 +399,17 @@
             <!-- Research Papers -->
             <div class="research-grid">
                 <div class="research-header" data-aos="fade-up">
-                    <h3>Supporting Research</h3>
-                    <p>OrniMetrics is grounded in peer-reviewed ornithological research demonstrating the need for smarter feeding solutions.</p>
+                    <h3>Our Research & Supporting Literature</h3>
+                    <p>OrniMetrics is built on original research by Baichen Yu and grounded in peer-reviewed ornithological studies.</p>
+                </div>
+                <div class="research-card research-card-featured" data-aos="fade-up" data-aos-delay="50">
+                    <div class="research-type">
+                        <i data-lucide="file-text"></i>
+                        <span>Original Research Paper</span>
+                    </div>
+                    <h4>OrniMetrics: AI-Powered Selective Bird Feeding Using Edge Computing</h4>
+                    <p class="research-meta">Yu, Baichen &mdash; <em>OrniMetrics Research</em></p>
+                    <p class="research-summary">The foundational paper describing the OrniMetrics system &mdash; a novel approach to selective bird feeding using edge AI, real-time species classification via custom YOLO models on the Raspberry Pi AI HAT+, and automated servo-controlled dispensing with per-species portion control.</p>
                 </div>
                 <div class="research-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="research-type">
@@ -543,8 +555,193 @@
         </div>
     </section>
 
+    <!-- Business Model Section -->
+    <section class="section" id="business">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Revenue</span>
+                <h2 class="section-title">Business<br><span class="gradient-text">Model</span></h2>
+                <p class="section-desc">Multiple revenue streams powering a sustainable smart-feeding ecosystem</p>
+            </div>
+            <div class="business-grid">
+                <div class="business-card business-card-primary" data-aos="fade-up" data-aos-delay="100">
+                    <div class="business-icon"><i data-lucide="box"></i></div>
+                    <h3>Hardware Sales</h3>
+                    <p>Premium OrniMetrics smart feeder units sold direct-to-consumer and through retail partners. Each unit includes the Raspberry Pi 5, AI HAT+, custom 3D-printed housing, and pre-configured software.</p>
+                    <div class="business-tag">Primary Revenue</div>
+                </div>
+                <div class="business-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="business-icon"><i data-lucide="repeat"></i></div>
+                    <h3>Subscription Service</h3>
+                    <p>OrniMetrics Pro subscription unlocks advanced analytics, cloud photo storage, AI species reports, rare bird alerts, and community leaderboards via the companion app.</p>
+                    <div class="business-tag">Recurring Revenue</div>
+                </div>
+                <div class="business-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="business-icon"><i data-lucide="bar-chart-3"></i></div>
+                    <h3>Data & Insights</h3>
+                    <p>Anonymized, aggregated bird population data sold to conservation organizations, universities, and wildlife agencies for ecological research and biodiversity monitoring.</p>
+                    <div class="business-tag">B2B Revenue</div>
+                </div>
+                <div class="business-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="business-icon"><i data-lucide="shopping-bag"></i></div>
+                    <h3>Consumables & Accessories</h3>
+                    <p>Species-optimized seed blends, replacement parts, upgraded camera modules, and seasonal accessories create an ongoing consumable revenue stream.</p>
+                    <div class="business-tag">Consumables</div>
+                </div>
+                <div class="business-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="business-icon"><i data-lucide="handshake"></i></div>
+                    <h3>Partnerships</h3>
+                    <p>Strategic partnerships with bird seed brands, wildlife organizations like Audubon Society, and smart home platforms for co-marketing and distribution.</p>
+                    <div class="business-tag">Strategic</div>
+                </div>
+                <div class="business-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="business-icon"><i data-lucide="graduation-cap"></i></div>
+                    <h3>Education & Licensing</h3>
+                    <p>STEM education kits for schools, licensing the OrniMetrics AI model to other wildlife tech companies, and API access for third-party developers.</p>
+                    <div class="business-tag">Licensing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section section-dark" id="pricing">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Plans</span>
+                <h2 class="section-title">Choose Your<br><span class="gradient-text">Plan</span></h2>
+                <p class="section-desc">From hobbyist birdwatcher to professional researcher</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">299</span>
+                        </div>
+                        <p class="pricing-period">One-time hardware cost</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> OrniMetrics Feeder Unit</li>
+                        <li><i data-lucide="check"></i> Basic species detection</li>
+                        <li><i data-lucide="check"></i> Companion app access</li>
+                        <li><i data-lucide="check"></i> Local photo storage</li>
+                        <li><i data-lucide="check"></i> Community access</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary pricing-btn">Get Started</a>
+                </div>
+                <div class="pricing-card pricing-card-featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-popular">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">9</span>
+                            <span class="price-period-inline">/mo</span>
+                        </div>
+                        <p class="pricing-period">+ $349 hardware</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Everything in Starter</li>
+                        <li><i data-lucide="check"></i> Cloud photo backup</li>
+                        <li><i data-lucide="check"></i> Advanced analytics dashboard</li>
+                        <li><i data-lucide="check"></i> Rare species alerts</li>
+                        <li><i data-lucide="check"></i> AI-generated species reports</li>
+                        <li><i data-lucide="check"></i> Priority support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary pricing-btn">Go Pro</a>
+                </div>
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <h3>Research</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">Custom</span>
+                        </div>
+                        <p class="pricing-period">For institutions & labs</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Everything in Pro</li>
+                        <li><i data-lucide="check"></i> Bulk deployment</li>
+                        <li><i data-lucide="check"></i> Raw data API access</li>
+                        <li><i data-lucide="check"></i> Custom AI model training</li>
+                        <li><i data-lucide="check"></i> Dedicated support</li>
+                        <li><i data-lucide="check"></i> White-label options</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary pricing-btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Frequently Asked<br><span class="gradient-text">Questions</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span>How does OrniMetrics identify bird species?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>OrniMetrics uses a custom-trained YOLO model running on the Raspberry Pi AI HAT+ at up to 120 FPS. The model has been trained on thousands of images to accurately classify bird species and distinguish them from squirrels in real-time.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <button class="faq-question">
+                        <span>Does it work in all weather conditions?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! The feeder housing is weatherproof with sealed electronics compartments. The camera housing protects the detection module from rain, snow, and direct sunlight while maintaining optimal viewing angles.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span>What happens when a squirrel is detected?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>When a squirrel is detected, the dispensing mechanism remains locked and the event is logged with a photo. The system can be configured with custom deterrent responses while remaining humane and safe for all wildlife.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                    <button class="faq-question">
+                        <span>How long does the feed storage last?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The gravity-fed storage compartment is designed for multi-day autonomous operation. Capacity depends on local bird traffic, but most users report 5-7 days between refills. The app notifies you when feed levels are low.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question">
+                        <span>Is an internet connection required?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No! All AI inference runs locally on the Raspberry Pi AI HAT+ &mdash; no cloud dependency. Internet is optional for Firebase logging, app notifications, and community features, but the core feeding system works fully offline.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                    <button class="faq-question">
+                        <span>Can I customize which species get fed?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Through the companion app, you can set per-species feeding rules, portion sizes, cooldown timers, and priority levels. You can even create schedules to attract specific species during optimal times.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Source Code Section -->
-    <section class="section" id="source">
+    <section class="section section-dark" id="source">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-tag">Open Source</span>
@@ -617,12 +814,15 @@
                         <a href="#how-it-works">How It Works</a>
                         <a href="#technology">Technology</a>
                         <a href="#parts">Parts Tour</a>
+                        <a href="#pricing">Pricing</a>
                     </div>
                     <div class="footer-col">
                         <h5>Resources</h5>
                         <a href="#research">Research</a>
                         <a href="#source">Source Code</a>
                         <a href="#app">Companion App</a>
+                        <a href="#business">Business Model</a>
+                        <a href="#faq">FAQ</a>
                     </div>
                     <div class="footer-col">
                         <h5>Connect</h5>
