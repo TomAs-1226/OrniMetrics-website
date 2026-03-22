@@ -18,6 +18,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Spline 3D Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.98/build/spline-viewer.js" async></script>
 </head>
 <body>
     <!-- Cursor Glow Effect -->
@@ -55,6 +58,9 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <div class="hero-spline-bg">
+            <iframe src="https://my.spline.design/untitled-MmJUhUj8soPqn03HDgkSZNwp/" frameborder="0" width="100%" height="100%" allow="autoplay" loading="eager"></iframe>
+        </div>
         <div class="hero-particles" id="heroParticles"></div>
         <div class="hero-gradient"></div>
         <div class="hero-content">
@@ -284,24 +290,7 @@
             </div>
             <div class="spline-container" data-aos="zoom-in" data-aos-delay="200">
                 <div class="spline-wrapper">
-                    <!-- Replace the URL below with your Spline scene URL -->
-                    <iframe
-                        src="https://my.spline.design/birdfeederv2-abc123/"
-                        frameborder="0"
-                        width="100%"
-                        height="100%"
-                        allow="autoplay"
-                        loading="lazy"
-                        id="splineViewer"
-                    ></iframe>
-                    <div class="spline-overlay" id="splineOverlay">
-                        <div class="spline-placeholder">
-                            <i data-lucide="rotate-3d"></i>
-                            <h3>3D Interactive Model</h3>
-                            <p>OrniMetrics feeder rendered in Spline</p>
-                            <span class="spline-hint">Click and drag to rotate</span>
-                        </div>
-                    </div>
+                    <spline-viewer loading-anim-type="spinner-big-dark" url="https://prod.spline.design/PjN5ispLQG2yKD7m/scene.splinecode"></spline-viewer>
                 </div>
                 <div class="spline-controls">
                     <span class="control-hint"><i data-lucide="mouse-pointer-click"></i> Click & drag to rotate</span>
@@ -321,9 +310,9 @@
             </div>
             <div class="parts-showcase">
                 <div class="part-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="part-visual">
+                    <div class="part-visual part-visual-3d">
                         <div class="part-number">01</div>
-                        <div class="part-icon-large"><i data-lucide="layout-grid"></i></div>
+                        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/33aQtUxUaW7BZOpm/scene.splinecode"></spline-viewer>
                     </div>
                     <div class="part-info">
                         <h3>Tray / Baseplate</h3>
@@ -335,9 +324,9 @@
                     </div>
                 </div>
                 <div class="part-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="part-visual">
+                    <div class="part-visual part-visual-3d">
                         <div class="part-number">02</div>
-                        <div class="part-icon-large"><i data-lucide="settings"></i></div>
+                        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/gytb6j65teR0XGin/scene.splinecode"></spline-viewer>
                     </div>
                     <div class="part-info">
                         <h3>Dispensing Mechanism</h3>
@@ -349,9 +338,9 @@
                     </div>
                 </div>
                 <div class="part-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="part-visual">
+                    <div class="part-visual part-visual-3d">
                         <div class="part-number">03</div>
-                        <div class="part-icon-large"><i data-lucide="archive"></i></div>
+                        <iframe src="https://my.spline.design/untitled-TzS8d7Z7iJ42tijaQeO8HGVx/" frameborder="0" width="100%" height="100%" allow="autoplay" loading="lazy"></iframe>
                     </div>
                     <div class="part-info">
                         <h3>Feed Storage</h3>
@@ -363,9 +352,9 @@
                     </div>
                 </div>
                 <div class="part-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="part-visual">
+                    <div class="part-visual part-visual-3d">
                         <div class="part-number">04</div>
-                        <div class="part-icon-large"><i data-lucide="camera"></i></div>
+                        <iframe src="https://my.spline.design/untitled-TzS8d7Z7iJ42tijaQeO8HGVx/" frameborder="0" width="100%" height="100%" allow="autoplay" loading="lazy"></iframe>
                     </div>
                     <div class="part-info">
                         <h3>Camera Housing</h3>

@@ -129,21 +129,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Spline overlay handler ---
-    const splineOverlay = document.getElementById('splineOverlay');
-    const splineViewer = document.getElementById('splineViewer');
-    if (splineOverlay && splineViewer) {
-        // Check if the Spline iframe loads successfully
-        splineViewer.addEventListener('load', () => {
-            // Add a small delay to let the scene render
-            setTimeout(() => {
-                splineOverlay.classList.add('hidden');
-            }, 1500);
-        });
-
-        // Click to dismiss overlay
-        splineOverlay.addEventListener('click', () => {
-            splineOverlay.classList.add('hidden');
+    // --- Spline hero interactivity toggle ---
+    const heroSplineBg = document.querySelector('.hero-spline-bg');
+    if (heroSplineBg) {
+        // Allow interaction with hero Spline on click
+        heroSplineBg.addEventListener('click', () => {
+            const iframe = heroSplineBg.querySelector('iframe');
+            if (iframe) iframe.style.pointerEvents = 'auto';
         });
     }
 
