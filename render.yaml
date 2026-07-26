@@ -1,0 +1,12 @@
+# Render Blueprint — deploys OrniMetrics as a fast static site.
+# Connect this repo in Render (New > Blueprint) and it reads this file.
+services:
+  - type: web
+    name: ornimetrics
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./out
+    pullRequestPreviewsEnabled: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
